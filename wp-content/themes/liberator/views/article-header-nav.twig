@@ -1,4 +1,8 @@
+{% if featured.thumbnail %}
 <header class="feature" style="background-image: url({{ featured.thumbnail.src }})">
+{% else %}
+<header class="feature no-img">
+{% endif %}
   <div class="gradient">
 
     {% include "nav.twig" %}
