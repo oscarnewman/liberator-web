@@ -21,13 +21,8 @@
         <div class="constrain">
           <a href="{{ featured.path }}">
             <h1>{{ featured.title}}</h1>
-            {% if post.get_field('sub_heading') %}
-              <p class="subtitle">{{ featured.sub_heading }}<span class="time"><i class="fa fa-clock-o"></i> <span class="eta"></span></span></p>
-              <p class="byline">by <span class="author">{{ featured.article_author }}</span></p>
-            {% else %}
-              <p class="byline">by <span class="author">{{ featured.article_author }}</span><span class="time"><i class="fa fa-clock-o"></i> <span class="eta"></span></span></p>
-            {% endif %}
-      
+            <p class="subtitle">{{ featured.sub_heading }}</p>
+            <p class="byline">by <span class="author">{{ featured.article_author }}</span><span class="time"><i class="fa fa-clock-o"></i> <span class="eta"></span></span></p>
           </a>
         </div>
       </div>

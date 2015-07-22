@@ -739,7 +739,7 @@ article {
     clear: both; }
   article p {
     margin-bottom: 30px; }
-  article .pull-quote {
+  article .pull-quote, article blockquote {
     *zoom: 1;
     width: auto;
     max-width: 630px;
@@ -751,27 +751,30 @@ article {
     padding-right: 0;
     color: #8E44AD;
     line-height: 49px;
+    padding: 0;
     margin-bottom: 70px;
     margin-top: 50px;
     font-family: "Open Sans";
     font-weight: 200;
     font-size: 36px;
     font-style: italic; }
-    article .pull-quote:before, article .pull-quote:after {
+    article .pull-quote:before, article .pull-quote:after, article blockquote:before, article blockquote:after {
       content: '';
       display: table; }
-    article .pull-quote:after {
+    article .pull-quote:after, article blockquote:after {
       clear: both; }
-  article .image {
+  article blockquote {
+    margin-bottom: 30px; }
+  article .image, article .wp-caption {
     font-family: "Open Sans"; }
-    article .image img {
+    article .image img, article .wp-caption img {
       width: 100%;
       margin-bottom: 6px; }
-    article .image p {
+    article .image p, article .wp-caption p {
       font-size: 14px;
       line-height: 19px;
       color: rgba(0, 0, 0, 0.5); }
-      article .image p.byline {
+      article .image p.byline, article .wp-caption p.byline {
         margin-bottom: 2px; }
   article .social {
     text-align: center;

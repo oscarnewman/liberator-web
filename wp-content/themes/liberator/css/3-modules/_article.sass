@@ -17,10 +17,11 @@ article
     p
         margin-bottom: 30px
 
-    .pull-quote
+    .pull-quote, blockquote
         +center(630px)
         color: #8E44AD
         line-height: 49px
+        padding: 0
         margin-bottom: 70px
         margin-top: 50px
         font:
@@ -29,7 +30,12 @@ article
             size: 36px
             style: italic
 
-    .image
+    blockquote
+        margin-bottom: 30px
+
+
+
+    .image, .wp-caption
         img
             width: 100%
             margin-bottom: 6px
@@ -43,6 +49,7 @@ article
 
             &.byline
                 margin-bottom: 2px
+
 
 
 

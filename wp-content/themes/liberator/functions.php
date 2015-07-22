@@ -2,6 +2,7 @@
 
 show_admin_bar(false);
 
+
 if ( ! class_exists( 'Timber' ) ) {
 	add_action( 'admin_notices', function() {
 			echo '<div class="error"><p>Timber not activated. Make sure you activate the plugin in <a href="' . esc_url( admin_url( 'plugins.php#timber' ) ) . '">' . esc_url( admin_url( 'plugins.php' ) ) . '</a></p></div>';
@@ -72,3 +73,12 @@ function liberator_scripts()
     wp_enqueue_script( 'functions' );
 }
 add_action( 'wp_enqueue_scripts', 'liberator_scripts' );
+
+function image_tag($html, $id, $alt, $title) {
+    $context = [];
+    $context['image'] = new TimberImage($id);
+    $context['alt'] = $alt;
+    $html = Timber::compile('image_embed.twig', $context);
+    return preg_replace('/\s+/S', " ", $html);;
+}
+add_filter('get_image_tag', 'image_tag', 0, 4);

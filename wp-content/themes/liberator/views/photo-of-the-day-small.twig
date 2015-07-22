@@ -3,8 +3,8 @@
     <img class="feature" src="{{ photo.thumbnail.src }}" height="508" width="476" alt="">
     <div class="right">
       <h2>Photo of the day</h2>
-      <p class="description">Three happy LASA students prepare for their AP exams</p>
-      <p class="byline">photo <span class="author">Roxy Bonafont</span></p>
+      <p class="description">{{ photo.description }}</p>
+      <p class="byline">photo <span class="author">{{ photo.article_author }}</span></p>
 
       <div class="latest-photos">
         <h3>Latest Photos</h3>
