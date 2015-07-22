@@ -73,7 +73,7 @@ if ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off') ||
 include 'wp-config.default.php';
 
 // Load config file for current environment
-include 'wp-config.' . WP_ENV . '.php';
+include '.env.wp-config.' . WP_ENV . '.php';
 
 // Define WordPress Site URLs if not already set in config files
 if (!defined('WP_SITEURL')) {
