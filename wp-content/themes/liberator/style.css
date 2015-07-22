@@ -776,6 +776,13 @@ article {
       color: rgba(0, 0, 0, 0.5); }
       article .image p.byline, article .wp-caption p.byline {
         margin-bottom: 2px; }
+  article .actions div {
+    display: inline-block;
+    position: relative; }
+  article .actions .gplus {
+    top: 4px; }
+  article .actions .fb-like {
+    top: -5px; }
   article .social {
     text-align: center;
     margin: 60px 0; }
