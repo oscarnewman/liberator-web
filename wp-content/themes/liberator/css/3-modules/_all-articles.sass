@@ -15,17 +15,23 @@
         color: rgba(255, 255, 255, .9)
         font:
             weight: 800
-            size: 36
+            size: 32px
         max-width: 600px
         margin: 50px 0 5px 0
+
+        +tablet
+            font-size: 42px
 
     .subtitle
         color: white
         font:
             weight: 200
-            size: 24px
+            size: 22px
         margin: 0 0 5px 0
         letter-spacing: 0.7px
+
+        +tablet
+            font-size: 24px
 
     .byline
         margin-bottom: 50px
@@ -41,7 +47,10 @@
     padding: 0 $page-padding
 
     .article
-        +col(1/2)
+        +col(1)
+
+        +mobile
+            +col(1/2)
 
     a:hover
         text-decoration: underline
@@ -51,6 +60,16 @@
         color: rgba(0, 0, 0, 0.9)
         font-size: 24px
         max-width: 420px
+        margin-top: 30px
+        
+        +mobile
+            margin-top: 50px
 
     .byline
         color: rgba(0, 0, 0, 0.56)
+        margin-bottom: 30px
+
+        +mobile
+            margin-bottom: 50px
+
+

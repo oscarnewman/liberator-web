@@ -17,6 +17,17 @@ nav
         a
             color: white
 
+    ul.menu-desktop
+        display: none
+
+        +tablet
+            display: block
+
+    ul.menu-mobile
+        display: block
+        +tablet
+            display: none
+
     ul
         float: right
         margin: 0

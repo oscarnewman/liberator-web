@@ -342,7 +342,7 @@ img::-moz-selection {
   background: transparent; }
 
 body {
-  -webkit-tap-highlight-color: #9b59b6; }
+  -webkit-tap-highlight-color: transparent; }
 
 a {
   color: #0074D9;
@@ -469,6 +469,16 @@ nav {
     font-size: 64px; }
     nav .logo a {
       color: white; }
+  nav ul.menu-desktop {
+    display: none; }
+    @media (min-width: 768px) {
+      nav ul.menu-desktop {
+        display: block; } }
+  nav ul.menu-mobile {
+    display: block; }
+    @media (min-width: 768px) {
+      nav ul.menu-mobile {
+        display: none; } }
   nav ul {
     float: right;
     margin: 0; }
@@ -520,13 +530,12 @@ section.photo-of-the-day {
     section.photo-of-the-day .content:after {
       clear: both; }
   section.photo-of-the-day .right {
-    position: relative;
     height: 100%;
     *zoom: 1;
     float: left;
     clear: none;
     text-align: inherit;
-    width: 67.8125%;
+    width: 100%;
     margin-left: 0%;
     margin-right: 3%; }
     section.photo-of-the-day .right:before, section.photo-of-the-day .right:after {
@@ -536,28 +545,51 @@ section.photo-of-the-day {
       clear: both; }
     section.photo-of-the-day .right:last-child {
       margin-right: 0%; }
+    @media (min-width: 768px) {
+      section.photo-of-the-day .right {
+        *zoom: 1;
+        float: left;
+        clear: none;
+        text-align: inherit;
+        width: 67.8125%;
+        margin-left: 0%;
+        margin-right: 3%; }
+        section.photo-of-the-day .right:before, section.photo-of-the-day .right:after {
+          content: '';
+          display: table; }
+        section.photo-of-the-day .right:after {
+          clear: both; }
+        section.photo-of-the-day .right:last-child {
+          margin-right: 0%; } }
   section.photo-of-the-day h2 {
     color: #8E44AD;
-    margin: 10px 0 0 0;
+    margin: 10px 0 0 10px;
     text-transform: uppercase;
     font-weight: 800;
     font-size: 24px; }
+    @media (min-width: 768px) {
+      section.photo-of-the-day h2 {
+        margin-left: 0; } }
   section.photo-of-the-day p.description {
     color: rgba(61, 61, 61, 0.35);
     margin-top: 10px;
     margin-bottom: 3px;
+    margin-left: 10px;
+    margin-right: 10px;
     font-weight: 200;
     font-size: 30px;
     line-height: 34px; }
+    @media (min-width: 768px) {
+      section.photo-of-the-day p.description {
+        margin-left: 0;
+        margin-right: 0; } }
   section.photo-of-the-day img.feature {
-    float: left;
-    margin-right: 20px;
     display: block;
     *zoom: 1;
     float: left;
     clear: none;
     text-align: inherit;
-    width: 29.1875%;
+    width: 100%;
     margin-left: 0%;
     margin-right: 3%;
     height: auto; }
@@ -568,25 +600,72 @@ section.photo-of-the-day {
       clear: both; }
     section.photo-of-the-day img.feature:last-child {
       margin-right: 0%; }
+    @media (min-width: 768px) {
+      section.photo-of-the-day img.feature {
+        *zoom: 1;
+        float: left;
+        clear: none;
+        text-align: inherit;
+        width: 29.1875%;
+        margin-left: 0%;
+        margin-right: 3%;
+        float: left;
+        margin-right: 20px; }
+        section.photo-of-the-day img.feature:before, section.photo-of-the-day img.feature:after {
+          content: '';
+          display: table; }
+        section.photo-of-the-day img.feature:after {
+          clear: both; }
+        section.photo-of-the-day img.feature:last-child {
+          margin-right: 0%; } }
   section.photo-of-the-day p.byline {
-    color: rgba(61, 61, 61, 0.35); }
+    color: rgba(61, 61, 61, 0.35);
+    margin-left: 10px; }
+    @media (min-width: 768px) {
+      section.photo-of-the-day p.byline {
+        margin-left: 0; } }
   section.photo-of-the-day .latest-photos {
-    padding-top: 10px; }
+    padding-top: 10px;
+    margin-left: 10px; }
+    @media (min-width: 768px) {
+      section.photo-of-the-day .latest-photos {
+        margin-left: 0; } }
     section.photo-of-the-day .latest-photos h3 {
       color: rgba(155, 89, 182, 0.53);
       text-transform: uppercase;
       font-weight: 600;
       font-size: 18px; }
     section.photo-of-the-day .latest-photos .photos-slide {
-      bottom: 0;
-      height: 60px;
-      float: left; }
+      bottom: 0; }
+      @media (min-width: 768px) {
+        section.photo-of-the-day .latest-photos .photos-slide {
+          height: 60px;
+          float: left; } }
     section.photo-of-the-day .latest-photos img {
-      height: 100%;
-      width: auto;
-      display: inline;
+      *zoom: 1;
+      float: left;
+      clear: none;
+      text-align: inherit;
+      width: 48.5%;
+      margin-left: 0%;
+      margin-right: 3%;
       margin: 0;
-      padding: 0; }
+      padding: 1px;
+      display: inline-block; }
+      section.photo-of-the-day .latest-photos img:before, section.photo-of-the-day .latest-photos img:after {
+        content: '';
+        display: table; }
+      section.photo-of-the-day .latest-photos img:after {
+        clear: both; }
+      section.photo-of-the-day .latest-photos img:last-child {
+        margin-right: 0%; }
+      @media (min-width: 768px) {
+        section.photo-of-the-day .latest-photos img {
+          height: 100%;
+          width: auto;
+          display: inline;
+          margin: 0;
+          padding: 0; } }
 
 .articles .article {
   background-size: cover !important;
@@ -614,15 +693,21 @@ section.photo-of-the-day {
 .articles h2 {
   color: rgba(255, 255, 255, 0.9);
   font-weight: 800;
-  font-size: 36;
+  font-size: 32px;
   max-width: 600px;
   margin: 50px 0 5px 0; }
+  @media (min-width: 768px) {
+    .articles h2 {
+      font-size: 42px; } }
 .articles .subtitle {
   color: white;
   font-weight: 200;
-  font-size: 24px;
+  font-size: 22px;
   margin: 0 0 5px 0;
   letter-spacing: 0.7px; }
+  @media (min-width: 768px) {
+    .articles .subtitle {
+      font-size: 24px; } }
 .articles .byline {
   margin-bottom: 50px; }
 .articles .pagination {
@@ -651,7 +736,7 @@ section.photo-of-the-day {
     float: left;
     clear: none;
     text-align: inherit;
-    width: 48.5%;
+    width: 100%;
     margin-left: 0%;
     margin-right: 3%; }
     .articles-small .article:before, .articles-small .article:after {
@@ -661,15 +746,39 @@ section.photo-of-the-day {
       clear: both; }
     .articles-small .article:last-child {
       margin-right: 0%; }
+    @media (min-width: 600px) {
+      .articles-small .article {
+        *zoom: 1;
+        float: left;
+        clear: none;
+        text-align: inherit;
+        width: 48.5%;
+        margin-left: 0%;
+        margin-right: 3%; }
+        .articles-small .article:before, .articles-small .article:after {
+          content: '';
+          display: table; }
+        .articles-small .article:after {
+          clear: both; }
+        .articles-small .article:last-child {
+          margin-right: 0%; } }
   .articles-small a:hover {
     text-decoration: underline;
     color: rgba(0, 0, 0, 0.9); }
   .articles-small h2 {
     color: rgba(0, 0, 0, 0.9);
     font-size: 24px;
-    max-width: 420px; }
+    max-width: 420px;
+    margin-top: 30px; }
+    @media (min-width: 600px) {
+      .articles-small h2 {
+        margin-top: 50px; } }
   .articles-small .byline {
-    color: rgba(0, 0, 0, 0.56); }
+    color: rgba(0, 0, 0, 0.56);
+    margin-bottom: 30px; }
+    @media (min-width: 600px) {
+      .articles-small .byline {
+        margin-bottom: 50px; } }
 
 footer {
   height: 120px;
@@ -717,7 +826,7 @@ footer {
 article {
   *zoom: 1;
   width: auto;
-  max-width: 900px;
+  max-width: 950px;
   float: none;
   display: block;
   margin-right: auto;
@@ -738,7 +847,8 @@ article {
   article:after {
     clear: both; }
   article p {
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    padding: 0 25px; }
   article .pull-quote, article blockquote {
     *zoom: 1;
     width: auto;
@@ -829,11 +939,17 @@ header.feature {
       opacity: 1; }
     header.feature .featured-article h1 {
       opacity: 0.9;
-      -webkit-transition: opacity, 0.1s;
-      transition: opacity, 0.1s;
+      -webkit-transition: opacity 0.1s, font-size 0.3s;
+      transition: opacity 0.1s, font-size 0.3s;
       color: white;
       margin-bottom: 10px;
-      font-weight: 800; }
+      font-weight: 800;
+      font-size: 48px; }
+      @media (min-width: 768px) {
+        header.feature .featured-article h1 {
+          font-size: 71px;
+          -webkit-transition: font-size 0.3s;
+          transition: font-size 0.3s; } }
     header.feature .featured-article p.subtitle {
       font-size: 26px;
       font-weight: 200;
@@ -852,8 +968,6 @@ header.feature {
         color: rgba(255, 255, 255, 0.6); }
 
 .sub-features {
-  padding: 0 20px;
-  margin-top: 20px;
   *zoom: 1;
   width: auto;
   max-width: 1000px;
@@ -868,13 +982,17 @@ header.feature {
     display: table; }
   .sub-features:after {
     clear: both; }
+  @media (min-width: 768px) {
+    .sub-features {
+      padding: 0 20px;
+      margin-top: 20px; } }
   .sub-features a {
     display: block;
     *zoom: 1;
     float: left;
     clear: none;
     text-align: inherit;
-    width: 31.3333333333%;
+    width: 100%;
     margin-left: 0%;
     margin-right: 3%;
     background-size: cover !important;
@@ -887,6 +1005,22 @@ header.feature {
       clear: both; }
     .sub-features a:last-child {
       margin-right: 0%; }
+    @media (min-width: 768px) {
+      .sub-features a {
+        *zoom: 1;
+        float: left;
+        clear: none;
+        text-align: inherit;
+        width: 31.3333333333%;
+        margin-left: 0%;
+        margin-right: 3%; }
+        .sub-features a:before, .sub-features a:after {
+          content: '';
+          display: table; }
+        .sub-features a:after {
+          clear: both; }
+        .sub-features a:last-child {
+          margin-right: 0%; } }
     .sub-features a div.article {
       height: 100%;
       background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));

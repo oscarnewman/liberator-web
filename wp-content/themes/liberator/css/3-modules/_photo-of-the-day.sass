@@ -5,41 +5,63 @@ section.photo-of-the-day
     .content
         height: 100%
         +center($page-width)
-    
+
     .right
-        position: relative
         height: 100%
-        +col(11/16)
+        +col(1)
+
+        +tablet
+            +col(11/16)
 
     h2
         color: #8E44AD
-        margin: 10px 0 0 0
+        margin: 10px 0 0 10px
         text-transform: uppercase
         font:
             weight: 800
             size: 24px
-
+    
+        +tablet
+            margin-left: 0
     p.description
         color: rgba(61, 61, 61, 0.35)
         margin-top: 10px
         margin-bottom: 3px
+        margin-left: 10px
+        margin-right: 10px
         font:
             weight: 200
             size: 30px
         line-height: 34px
 
+        +tablet
+            margin-left: 0
+            margin-right: 0
+
     img.feature
-        float: left
-        margin-right: 20px
         display: block
-        +col(5/16)
+        +col(1)
         height: auto
+
+        +tablet
+            +col(5/16)
+            float: left
+            margin-right: 20px
+
+
 
     p.byline
         color: rgba(61, 61, 61, 0.35)
+        margin-left: 10px
+        +tablet
+            margin-left: 0
 
     .latest-photos
         padding-top: 10px
+        margin-left: 10px
+        +tablet
+            margin-left: 0
+
         h3
             color: rgba(155, 89, 182, 0.53)
             text-transform: uppercase
@@ -49,12 +71,18 @@ section.photo-of-the-day
 
         .photos-slide
             bottom: 0
-            height: 60px
-            float: left
+            +tablet
+                height: 60px
+                float: left
 
         img
-            height: 100%
-            width: auto
-            display: inline
+            +col(1/2)
             margin: 0
-            padding: 0            
+            padding: 1px
+            display: inline-block
+            +tablet
+                height: 100%
+                width: auto
+                display: inline
+                margin: 0
+                padding: 0            
