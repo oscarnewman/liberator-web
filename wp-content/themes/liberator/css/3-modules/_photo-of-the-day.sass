@@ -1,0 +1,60 @@
+section.photo-of-the-day
+    margin: 40px 0
+    background: #F7F7F7
+
+    .content
+        height: 100%
+        +center($page-width)
+    
+    .right
+        position: relative
+        height: 100%
+        +col(11/16)
+
+    h2
+        color: #8E44AD
+        margin: 10px 0 0 0
+        text-transform: uppercase
+        font:
+            weight: 800
+            size: 24px
+
+    p.description
+        color: rgba(61, 61, 61, 0.35)
+        margin-top: 10px
+        margin-bottom: 3px
+        font:
+            weight: 200
+            size: 30px
+        line-height: 34px
+
+    img.feature
+        float: left
+        margin-right: 20px
+        display: block
+        +col(5/16)
+        height: auto
+
+    p.byline
+        color: rgba(61, 61, 61, 0.35)
+
+    .latest-photos
+        padding-top: 10px
+        h3
+            color: rgba(155, 89, 182, 0.53)
+            text-transform: uppercase
+            font:
+                weight: 600
+                size: 18px
+
+        .photos-slide
+            bottom: 0
+            height: 60px
+            float: left
+
+        img
+            height: 100%
+            width: auto
+            display: inline
+            margin: 0
+            padding: 0            

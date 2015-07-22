@@ -1,0 +1,29 @@
+footer
+    $footer-height: 120px
+    height: $footer-height
+    background-color: #F7F7F7
+
+    .container
+        +center($page-width)
+        padding: 0 $page-padding
+        +cf()
+
+    .logo
+        float: left
+        font:
+            family: 'Gentium Book Basic'
+            style: italic
+            size: 36px
+        color: rgba(0, 0, 0, 0.75)
+        line-height: $footer-height
+        margin: 0
+        padding: 0
+ 
+    .copyright
+        float: right
+        line-height: $footer-height
+        text-transform: uppercase
+        color: rgba(0, 0, 0, .3)
+        font-size: 12px
+        margin: 0
+        padding: 0

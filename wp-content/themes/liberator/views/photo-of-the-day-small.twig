@@ -1,0 +1,20 @@
+<section class="photo-of-the-day">
+  <div class="content">
+    <img class="feature" src="{{ photo.thumbnail.src }}" height="508" width="476" alt="">
+    <div class="right">
+      <h2>Photo of the day</h2>
+      <p class="description">Three happy LASA students prepare for their AP exams</p>
+      <p class="byline">photo <span class="author">Roxy Bonafont</span></p>
+
+      <div class="latest-photos">
+        <h3>Latest Photos</h3>
+        <div class="photos-slide">
+          {% for old_photo in old_photos %}
+            <img src="{{ old_photo.thumbnail.src }}" alt="">
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

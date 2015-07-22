@@ -1,0 +1,71 @@
+{% extends "base.twig" %}
+
+{% block content %}
+    
+    {% include "article-header-nav.twig" %}
+
+    {% include "subfeatures.twig" %}
+    
+    {% include "photo-of-the-day-small.twig" %}
+
+    <section class="articles">
+        {% for i in 0..2 %}
+            {% for j in 0..1 %}
+                {% set post = image_posts[2*i + j] %}
+                <div class="article" style="background: url({{ post.thumbnail.src }});">
+                  <div class="gradient">
+                    <div class="container">
+                      <a href="{{ post.path }}">
+                        <h2>{{ post.title }}</h2>
+                        {% if post.get_field('sub_heading') %}
+                            <p class="subtitle">{{ post.sub_heading }}</p>
+                        {% endif %}
+                        <p class="byline">by <span class="author">{{ post.article_author|default(post.author) }}</span></p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+            {% endfor %}
+            
+            <div class="articles-small">
+                {% for j in 0..1 %}
+                    {% set post = plain_posts[2*i + j] %}
+                    <div class="article">
+                      <a href="{{ post.path }}">
+                        <h2>{{ post.title }}</h2>
+                      </a>
+                      <p class="byline">by <span class="author">{{ post.article_author|default(post.author) }}</span></p>
+                    </div>
+                {% endfor %}
+            </div>
+
+        {% endfor %}
+        <div class="articles-small">
+            {% for j in 0..1 %}
+                {% set post = plain_posts[6 + j] %}
+                <div class="article">
+                  <a href="{{ post.path }}">
+                    <h2>{{ post.title }}</h2>
+                  </a>
+                  <p class="byline">by <span class="author">{{ post.article_author|default(post.author) }}</span></p>
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="pagination">
+          <a href="#" class="button">More Articles</a>
+        </div>
+        
+    </section>
+
+
+{% endblock %}
+
+{# 
+0   0   = 0
+0   1   = 1
+1   0   = 2
+1   1   = 3
+2   0   = 4
+2   1   = 5
+ #}

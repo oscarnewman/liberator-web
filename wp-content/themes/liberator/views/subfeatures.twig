@@ -1,0 +1,12 @@
+<section class="sub-features">
+    {% for post in subfeatures %}
+    <a href="{{ post.path }}" class="article-wrap" style="background: url({{ post.thumbnail.src }});">
+      <div class="article color-1">
+        <div class="bottom-align">
+          <h1>{{ post.title }}</h1>
+          <p class="byline">by <span class="author">{{ post.article_author }}</span></p>
+        </div>
+      </div>
+    </a>
+    {% endfor %}
+</section>
