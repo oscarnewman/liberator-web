@@ -479,6 +479,8 @@ nav {
     line-height: 90px;
     margin: 0;
     padding: 0; }
+    nav .footer-logo a {
+      color: white; }
   nav ul.menu-desktop {
     display: none; }
     @media (min-width: 768px) {
