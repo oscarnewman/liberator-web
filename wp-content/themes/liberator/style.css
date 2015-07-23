@@ -438,7 +438,8 @@ input[type="button"] {
     outline: 0; }
 
 .logocheck {
-  visibility: hidden; }
+  position: absolute;
+  display: none; }
   .logocheck ~ .logo {
     display: block; }
   .logocheck ~ .footer-logo {
