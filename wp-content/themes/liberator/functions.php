@@ -79,6 +79,7 @@ function image_tag($html, $id, $alt, $title) {
     $context['image'] = new TimberImage($id);
     $context['alt'] = $alt;
     $html = Timber::compile('image_embed.twig', $context);
-    return preg_replace('/\s+/S', " ", $html);;
+    return $html;
+    // return preg_replace('/\s+/S', " ", $html);;
 }
 add_filter('get_image_tag', 'image_tag', 0, 4);

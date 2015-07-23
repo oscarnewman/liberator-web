@@ -1,8 +1,1 @@
-<div class="image">
-<img src="{{ image.get_src }}"alt=" {{ alt }} ">
-{% if image.get_field('credit') %}
-<p class="byline byline-light">photo <span class="author">{{ image.credit }}</span></p>
-{% endif %}
-{% if image.caption %}
-<p class="description">{{ image.caption }}</p>
-{% endif %}</div>
+<div class="image"><img src="{{ image.get_src }}"alt="{{alt}}" />{% if image.get_field('credit') %}<p class="byline byline-light">photo <span class="author">{{ image.credit }}</span></p>{% endif %}{% if image.caption %}<p class="description">{{ image.caption }}</p>{% endif %}</div>
