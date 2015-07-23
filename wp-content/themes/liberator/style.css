@@ -437,6 +437,17 @@ input[type="button"] {
     border-color: #888;
     outline: 0; }
 
+.logocheck {
+  visibility: hidden; }
+  .logocheck ~ .logo {
+    display: block; }
+  .logocheck ~ .footer-logo {
+    display: none; }
+  .logocheck:checked ~ .logo {
+    display: none; }
+  .logocheck:checked ~ .footer-logo {
+    display: block; }
+
 nav {
   width: 100%;
   height: 90px; }
@@ -466,9 +477,20 @@ nav {
     float: left;
     line-height: 90px;
     font-family: "Baskerville";
-    font-size: 64px; }
+    font-size: 64px;
+    color: white; }
     nav .logo a {
       color: white; }
+  nav .footer-logo {
+    display: none;
+    float: left;
+    font-family: "Gentium Book Basic";
+    font-style: italic;
+    font-size: 36px;
+    color: white;
+    line-height: 90px;
+    margin: 0;
+    padding: 0; }
   nav ul.menu-desktop {
     display: none; }
     @media (min-width: 768px) {

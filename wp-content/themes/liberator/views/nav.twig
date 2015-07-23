@@ -1,9 +1,12 @@
 <nav>
 <div class="container">
-  <div class="logo"><a href="{{ function('bloginfo', 'url') }}" rel="home">L</a></div>
-  
+  {# <div class="logo"><a href="{{ function('bloginfo', 'url') }}" rel="home">L</a></div> #}
+  <input type="checkbox" class="logocheck" name="logocheck" id="logocheck">
+  <div class="footer-logo">The Liberator</div>
+  <div class="logo">L</div>
+
   <ul class="menu-desktop">
-    <li><a href="">Feature</a></li>
+    <li><a href="#"><label for="logocheck">Feature</label></a></li>
     <li><a href="">Commentary</a></li>
     <li><a href="">Sports</a></li>
     <li><a href=""><i class="fa fa-search"></i></a></li>
