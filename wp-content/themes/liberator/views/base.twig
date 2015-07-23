@@ -7,6 +7,10 @@
 {% endblock %}
 
 	<body class="{{body_class}}" data-template="base.twig">
+		<audio autoplay>
+		  <source src="{{function('bloginfo','template_directory')}}/assets/audio/quinn.mp3" type="audio/mpeg">
+		  Your browser does not support the audio element.
+		</audio>
 {# 		<header class="header" >
 			{% block header %}
 				<div class="wrapper">
