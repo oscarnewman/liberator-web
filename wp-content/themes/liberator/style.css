@@ -136,6 +136,7 @@
  * Apply a clearfix to an element.
  */
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
+@import url(http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic);
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -318,7 +319,7 @@ body {
   background-color: white;
   font-size: 14px;
   line-height: 1.6;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: #666;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%; }
@@ -348,7 +349,8 @@ a {
   color: #0074D9;
   text-decoration: none;
   outline: 0; }
-  a:hover, a:focus {
+  a:hover,
+  a:focus {
     color: #40a6ff; }
 
 .gigantic, .huge, .large, .bigger, .big,
@@ -411,7 +413,7 @@ input[type="button"] {
   font-size: 11px;
   font-weight: 600;
   line-height: 38px;
-  letter-spacing: 0.1rem;
+  letter-spacing: .1rem;
   text-transform: uppercase;
   text-decoration: none;
   white-space: nowrap;
@@ -420,7 +422,9 @@ input[type="button"] {
   border: 1px solid #bbb;
   cursor: pointer;
   box-sizing: border-box; }
-  .button:hover, .button:active, .button:focus,
+  .button:hover,
+  .button:active,
+  .button:focus,
   button:hover,
   button:active,
   button:focus,
@@ -465,14 +469,14 @@ nav {
   nav .logo {
     float: left;
     line-height: 90px;
-    font-family: "Baskerville";
+    font-family: 'Baskerville';
     font-size: 64px;
     color: white; }
     nav .logo a {
       color: white; }
   nav .footer-logo {
     float: left;
-    font-family: "Gentium Book Basic";
+    font-family: 'Gentium Book Basic';
     font-style: italic;
     font-size: 36px;
     color: white;
@@ -682,10 +686,12 @@ section.photo-of-the-day {
 .articles .article {
   background-size: cover !important;
   background-position: center !important; }
+
 .articles .gradient {
   background-image: -webkit-linear-gradient( left , rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4));
   background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4));
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)); }
+
 .articles .container {
   *zoom: 1;
   width: auto;
@@ -702,6 +708,7 @@ section.photo-of-the-day {
     display: table; }
   .articles .container:after {
     clear: both; }
+
 .articles h2 {
   color: rgba(255, 255, 255, 0.9);
   font-weight: 800;
@@ -711,6 +718,7 @@ section.photo-of-the-day {
   @media (min-width: 768px) {
     .articles h2 {
       font-size: 42px; } }
+
 .articles .subtitle {
   color: white;
   font-weight: 200;
@@ -720,8 +728,10 @@ section.photo-of-the-day {
   @media (min-width: 768px) {
     .articles .subtitle {
       font-size: 24px; } }
+
 .articles .byline {
   margin-bottom: 50px; }
+
 .articles .pagination {
   text-align: center; }
   .articles .pagination a.button {
@@ -819,7 +829,7 @@ footer {
       clear: both; }
   footer .logo {
     float: left;
-    font-family: "Gentium Book Basic";
+    font-family: 'Gentium Book Basic';
     font-style: italic;
     font-size: 36px;
     color: rgba(0, 0, 0, 0.75);
@@ -846,13 +856,13 @@ article {
   padding-left: 0;
   padding-right: 0;
   margin-top: 40px;
-  font-family: "Lora";
+  font-family: 'Lora';
   font-size: 20px;
   line-height: 34px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: rgba(0, 0, 0, 0.75);
-  letter-spacing: 0.01em; }
+  letter-spacing: .01em; }
   article:before, article:after {
     content: '';
     display: table; }
@@ -876,7 +886,7 @@ article {
     padding: 0;
     margin-bottom: 70px;
     margin-top: 50px;
-    font-family: "Open Sans";
+    font-family: 'Open Sans';
     font-weight: 200;
     font-size: 36px;
     font-style: italic; }
@@ -888,7 +898,7 @@ article {
   article blockquote {
     margin-bottom: 30px; }
   article .image, article .wp-caption {
-    font-family: "Open Sans"; }
+    font-family: 'Open Sans'; }
     article .image img, article .wp-caption img {
       width: 100%;
       margin-bottom: 6px; }
@@ -1062,3 +1072,4 @@ header.feature {
     font-weight: 800;
     font-size: 26px;
     line-height: 30px; }
+/*# sourceMappingURL=style.css.map */
