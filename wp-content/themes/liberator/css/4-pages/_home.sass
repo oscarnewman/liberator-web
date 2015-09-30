@@ -1,7 +1,7 @@
 header.feature
     background-size: cover !important
     background-position: center !important
-    
+
     &.no-img
         background: $purple
 
@@ -57,10 +57,22 @@ header.feature
 
 .sub-features
     +center($page-width)
-    
+
     +tablet
         padding: 0 $page-padding
         margin-top: 20px
+
+    .section
+        display: block
+        position: absolute
+        top: 0
+        left: 0
+        padding: 2px 5px
+        background-color: transparentize(#2B043B, .16)
+        color: transparentize(white, 0.16)
+        font-size: 12px
+        text-transform: uppercase
+        font-weight: 700
 
     a
         display: block
