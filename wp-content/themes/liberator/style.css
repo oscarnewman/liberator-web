@@ -984,6 +984,8 @@ article {
     .articles.flow .small-articles .article .description {
       font-size: 14px;
       color: rgba(0, 0, 0, 0.62); }
+  .articles.flow .one-third .article, .articles.flow .two-thirds .article, .articles.flow .one-half .article {
+    padding: 10px; }
   .articles.flow .one-third {
     *zoom: 1;
     float: left;
@@ -999,7 +1001,7 @@ article {
       clear: both; }
     .articles.flow .one-third:last-child {
       margin-right: 0%; }
-    @media (min-width: 600px) {
+    @media (min-width: 768px) {
       .articles.flow .one-third {
         *zoom: 1;
         float: left;
@@ -1033,7 +1035,7 @@ article {
       clear: both; }
     .articles.flow .two-thirds:last-child {
       margin-right: 0%; }
-    @media (min-width: 600px) {
+    @media (min-width: 768px) {
       .articles.flow .two-thirds {
         *zoom: 1;
         float: left;
@@ -1067,7 +1069,7 @@ article {
       clear: both; }
     .articles.flow .one-half:last-child {
       margin-right: 0%; }
-    @media (min-width: 600px) {
+    @media (min-width: 768px) {
       .articles.flow .one-half {
         *zoom: 1;
         float: left;
