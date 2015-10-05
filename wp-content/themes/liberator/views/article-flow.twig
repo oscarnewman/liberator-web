@@ -102,7 +102,7 @@
         {% for post in entertainment %}
           <div class="article">
             <a href="{{ post.path }}">
-              {% if post.thumbnail %}
+              {% if post.thumbnail and loop.index == 1 %}
                 <img src="{{ post.thumbnail.src }}" alt="" class="featured-image">
               {% endif %}
               <h2>{{ post.title }}</h2>
