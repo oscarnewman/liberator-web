@@ -21,6 +21,7 @@ $context = Timber::get_context();
 
 $context['featured'] = Timber::get_post('category_name=featured');
 $context['subfeatures'] = Timber::get_posts('category_name=sub-feature&numberposts=3');
+
 $context['image_posts'] = Timber::get_posts('numberposts=6&meta_key=_thumbnail_id&cat=-2,-3,-4');
 
 $context['plain_posts'] = Timber::get_posts(array(
@@ -34,6 +35,13 @@ $context['plain_posts'] = Timber::get_posts(array(
         )
     ),
 ));
+
+$context['posts'] = Timber::get_posts('numberposts=8&cat=-2,-3,-4,-10,-8');
+
+$context['games'] = Timber::get_posts('numberposts=4&cat=8');
+
+$context['sports'] = Timber::get_posts('numberposts=4&cat=9');
+$context['entertainment'] = Timber::get_posts('numberposts=3&cat=10');
 
 $context['photo'] = Timber::get_post([
     'cat' => 4

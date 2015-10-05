@@ -1,7 +1,12 @@
 $( document ).ready(function() {
 
   // Get started!
-  
+  //
+  $(".search-toggle").click(function() {
+    $(".search-field-wrap").toggleClass("visible");
+    $(".search-field-wrap input").focus();
+  });
+
   $('article').readingTime({
     lessThanAMinuteString: '<1 min'
   });

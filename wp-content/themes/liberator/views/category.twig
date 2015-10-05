@@ -1,0 +1,40 @@
+{% extends "base.twig" %}
+
+{% block content %}
+
+    {% include "nav.twig" with {"bg" : "white"} %}
+
+
+    <section class="articles flow">
+
+            {% for post in posts %}
+              <div class="article">
+                <a href="{{ post.path }}">
+                  <h2>{{ post.title }}</h2>
+                </a>
+                <p class="description">
+                  {# {{ post.title }} #}
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil necessitatibus qui dolores quos temporibus soluta magnam maiores corporis, quas, cumque veniam dolore adipisci expedita tenetur nemo? Voluptate nam, fugiat temporibus.
+                </p>
+                <p class="byline">by <span class="author">{{ post.article_author|default(post.author) }}</span></p>
+              </div>
+          {% endfor %}
+
+
+        <div class="pagination">
+          <a href="#" class="button">More Articles</a>
+        </div>
+
+    </section>
+
+
+{% endblock %}
+
+{#
+0   0   = 0
+0   1   = 1
+1   0   = 2
+1   1   = 3
+2   0   = 4
+2   1   = 5
+ #}

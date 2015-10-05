@@ -1,5 +1,5 @@
 {% if featured.thumbnail %}
-<header class="feature" style="background-image: url({{ featured.thumbnail.src }})">
+<header class="feature full-bleed" style="background-image: url({{ featured.thumbnail.src }})">
 {% else %}
 <header class="feature no-img">
 {% endif %}
@@ -7,7 +7,7 @@
 
     {% include "nav.twig" %}
 
-      
+
       <div class="featured-article">
         <div class="constrain">
           <a href="{{ featured.path }}">
@@ -18,7 +18,7 @@
             {% else %}
               <p class="byline">by <span class="author">{{ featured.article_author }}</span><span class="time"><i class="fa fa-clock-o"></i> <span class="eta"></span></span></p>
             {% endif %}
-      
+
           </a>
         </div>
       </div>

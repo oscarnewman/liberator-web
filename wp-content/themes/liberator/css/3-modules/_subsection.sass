@@ -1,0 +1,36 @@
+.subsection
+    position: relative
+    h3
+        font-size: 14px
+        color: black
+        font-weight: 400
+        text-align: center
+        text-transform: uppercase
+        background: white
+        padding: 3px
+        +transform(translateY(50%))
+        line-height: 20px
+        position: relative
+
+        &:after
+            border-top: solid 1px #BDBDBD
+            content: ""
+            margin: 0 auto /* this centers the line to the full width specified */
+            position: absolute /* positioning must be absolute here, and relative positioning must be applied to the parent */
+            top: 50%
+            left: 0
+            right: 0
+            bottom: 0
+            width: 95%
+            z-index: -1
+
+        span
+            background: white
+            padding: 5px
+
+    .article
+        h2
+            font-size: 24px !important
+
+
+

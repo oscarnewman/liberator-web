@@ -1,4 +1,65 @@
-header.feature
+
+header.feature:not(.full-bleed)
+    .featured-article
+        +center($page-width)
+        padding: 0 $page-padding
+
+        .content
+            margin: 50px 0 30px 0
+            +cf
+            position: relative
+
+        .left
+            +col(1)
+            +mobile
+                +col(1/3)
+            overflow: hidden
+            position: relative
+
+            img
+                width: 100%
+
+        .constrain
+            +col(1)
+            +mobile
+                +col(2/3)
+
+        a:hover h1
+            +transition(opacity, 0.1s)
+            opacity: 1
+        h1
+            opacity: 0.9
+            +transition(opacity 0.1s, font-size .3s)
+            color: black
+            margin: 0
+            margin-bottom: 10px
+            font:
+                weight: 800
+                size: 48px
+
+            +tablet
+                font-size: 71px
+                +transition(font-size .3s)
+
+        p.subtitle
+            font:
+                size: 26px
+                weight: 200
+            color: black
+            margin-bottom: 5px
+
+            .time
+                font-size: 18px
+                margin-left: 10px
+                text-transform: uppercase
+        .byline
+            color: black
+            .time
+                margin-left: 10px
+                text-transform: uppercase
+
+
+header.feature.full-bleed
     background-size: cover !important
     background-position: center !important
 

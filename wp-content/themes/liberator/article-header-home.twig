@@ -1,15 +1,25 @@
-<header class="feature" style="background-image: url({{ featured.thumbnail.src }})">
+<header class="home feature">
   <div class="gradient">
-    
+
       {% include "nav.twig" %}
-      
+
       <div class="featured-article">
-        <div class="constrain">
-          <a href="{{ featured.path }}">
-            <h1>{{ featured.title}}</h1>
-            <p class="subtitle">{{ featured.sub_heading }}</p>
-            <p class="byline">by <span class="author">{{ featured.article_author }}</span><span class="time"><i class="fa fa-clock-o"></i> <span class="eta"></span></span></p>
-          </a>
+        <div class="content">
+          {% if featured.thumbnail %}
+            {# <img src="{{ featured.thumbnail.src }}"> #}
+            <div class="left">
+              <div class="image">
+                <img src="{{ featured.thumbnail.src }}" alt="">
+              </div>
+            </div>
+          {% endif %}
+          <div class="constrain">
+            <a href="{{ featured.path }}">
+              <h1>{{ featured.title}}</h1>
+              <p class="subtitle">{{ featured.sub_heading }}</p>
+              <p class="byline">by <span class="author">{{ featured.article_author }}</span><span class="time"><i class="fa fa-clock-o"></i> <span class="eta"></span></span></p>
+            </a>
+          </div>
         </div>
       </div>
     </div>
