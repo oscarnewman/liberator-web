@@ -5,7 +5,13 @@
 {% endif %}
   <div class="gradient">
 
-    {% include "nav.twig" %}
+
+    {% if featured.thumbnail %}
+      {% include "nav.twig" %}
+    {% else %}
+      {% include "nav.twig" with {"bg" : "white"} %}
+      <br>
+    {% endif %}
 
 
       <div class="featured-article">
