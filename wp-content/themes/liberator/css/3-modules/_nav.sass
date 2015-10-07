@@ -2,6 +2,17 @@ nav
     width: 100%
     height: $nav-height
 
+
+    &.search-visible
+
+        .search-field-wrap
+            display: inline-block
+
+        .logo
+            display: none
+            +mobile
+                display: inline-block
+
     .search-field-wrap
         display: none
 
@@ -12,6 +23,10 @@ nav
             border-bottom: solid 2px white
             color: white
             font-size: 16px
+            appearance: none
+            border-radius: 0
+
+
 
         &.visible
             display: inline-block
@@ -44,6 +59,8 @@ nav
         line-height: $nav-height
         margin: 0
         padding: 0
+        +transition(font-size .2s)
+
 
         a
             color: white

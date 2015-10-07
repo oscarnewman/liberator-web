@@ -3,7 +3,7 @@ $( document ).ready(function() {
   // Get started!
   //
   $(".search-toggle").click(function() {
-    $(".search-field-wrap").toggleClass("visible");
+    $("nav").toggleClass("search-visible");
     $(".search-field-wrap input").focus();
   });
 
