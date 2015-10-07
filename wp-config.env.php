@@ -21,6 +21,10 @@ switch ($hostname) {
         break;
 
     case 'dev.lbjliberator.com':
+        define('WP_ENV', 'staging');
+        break;
+
+    case 'lbjliberator.com':
         define('WP_ENV', 'production');
         break;
 
