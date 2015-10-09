@@ -530,7 +530,8 @@ nav {
     top: 90px;
     left: 0;
     width: 100%;
-    z-index: 4; }
+    z-index: 4;
+    padding: 0; }
     nav ul.menu-desktop .search {
       display: none; }
     nav ul.menu-desktop li:not(.search-field-wrap):not(.search) {
