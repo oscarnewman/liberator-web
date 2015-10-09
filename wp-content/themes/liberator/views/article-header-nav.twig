@@ -18,11 +18,11 @@
         <div class="constrain">
           <a href="{{ featured.path }}">
             <h1>{{ featured.title}}</h1>
-            {% if post.get_field('sub_heading') %}
+            {% if featured.get_field('sub_heading') %}
               <p class="subtitle">{{ featured.sub_heading }}<span class="time"><i class="fa fa-clock-o"></i> <span class="eta"></span></span></p>
-              <p class="byline ">by <span class="author">{{ posts[i].article_author|default(posts[i].author) }}</span></p>
+              <p class="byline ">by <span class="author">{{ featured.article_author|default(featured.author) }}</span></p>
             {% else %}
-              <p class="byline ">by <span class="author">{{ posts[i].article_author|default(posts[i].author) }}</span><span class="time"><i class="fa fa-clock-o"></i> <span class="eta"></span></span></p>
+              <p class="byline ">by <span class="author">{{ featured.article_author|default(featured.author) }}</span><span class="time"><i class="fa fa-clock-o"></i> <span class="eta"></span></span></p>
             {% endif %}
 
           </a>

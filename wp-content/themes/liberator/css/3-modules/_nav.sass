@@ -82,13 +82,46 @@ nav
     ul.menu-desktop
         display: none
 
-        +tablet
+        @media(max-width: 860px)
+            background: #333
+            position: absolute
+            top: $nav-height
+            left: 0
+            width: 100%
+            z-index: 4
+
+            .search
+                display: none
+
+            li:not(.search-field-wrap):not(.search)
+                display: block
+                line-height: 20px
+
+                a
+                    color: white
+                    margin: 0
+                    padding: 10px 0
+                    display: block
+                    height: 100%
+
+
+
+        @media(min-width: 860px)
             display: block
+            .search
+                display: inline-block
+
+
+
+
 
     ul.menu-mobile
         display: block
-        +tablet
+        @media(min-width: 860px)
             display: none
+
+        li a
+            font-size: 20px
 
     ul
         float: right
@@ -102,7 +135,7 @@ nav
             a
                 color: white
                 font:
-                    size: 16px
+                    size: 14px
                     weight: 700
                 opacity: 0.8
                 +transition(opacity, .1s)
@@ -111,3 +144,39 @@ nav
                     color: white
                     opacity: 1
                     +transition(opacity, .1s)
+
+
+.lower
+    $sub-height: 30px
+    height: $sub-height
+    // border-bottom: solid 1px #ddd
+
+    &.white
+        background: #f7f7f7
+
+    .container
+        +center($page-width)
+        padding: 0 $page-padding
+        +cf()
+
+    .menu-slider
+        height: 20px
+        list-style: none
+        margin: 0
+        padding: 0
+
+
+        li
+            display: inline-block
+            margin-right: 10px
+            text-align: justify
+
+            span.fill
+                width: 100%
+
+            a
+                text-transform: uppercase
+                color: #B159B6
+                // font-size:
+                line-height: $sub-height
+                font-weight: 600

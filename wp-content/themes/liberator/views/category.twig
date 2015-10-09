@@ -8,13 +8,12 @@
     <section class="articles flow">
 
             {% for post in posts %}
-              <div class="article">
+              <div class="article image-right">
                 <a href="{{ post.path }}">
                   <h2>{{ post.title }}</h2>
                 </a>
                 <p class="description">
-                  {# {{ post.title }} #}
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil necessitatibus qui dolores quos temporibus soluta magnam maiores corporis, quas, cumque veniam dolore adipisci expedita tenetur nemo? Voluptate nam, fugiat temporibus.
+                  {{ post.description|default(function('strip_tags', post.content) < 300 ? function('strip_tags', post.content)|slice(0,300) ~ "..." : function('strip_tags', post.content)) }}
                 </p>
                 <p class="byline">by <span class="author">{{ post.article_author|default(post.author) }}</span></p>
               </div>
