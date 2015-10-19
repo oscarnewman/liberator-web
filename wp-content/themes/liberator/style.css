@@ -1373,37 +1373,6 @@ header.feature:not(.full-bleed) .featured-article {
           margin-right: 0%; } }
     header.feature:not(.full-bleed) .featured-article .left img {
       width: 100%; }
-  header.feature:not(.full-bleed) .featured-article .constrain {
-    *zoom: 1;
-    float: left;
-    clear: none;
-    text-align: inherit;
-    width: 100%;
-    margin-left: 0%;
-    margin-right: 3%; }
-    header.feature:not(.full-bleed) .featured-article .constrain:before, header.feature:not(.full-bleed) .featured-article .constrain:after {
-      content: '';
-      display: table; }
-    header.feature:not(.full-bleed) .featured-article .constrain:after {
-      clear: both; }
-    header.feature:not(.full-bleed) .featured-article .constrain:last-child {
-      margin-right: 0%; }
-    @media (min-width: 600px) {
-      header.feature:not(.full-bleed) .featured-article .constrain {
-        *zoom: 1;
-        float: left;
-        clear: none;
-        text-align: inherit;
-        width: 65.6666666667%;
-        margin-left: 0%;
-        margin-right: 3%; }
-        header.feature:not(.full-bleed) .featured-article .constrain:before, header.feature:not(.full-bleed) .featured-article .constrain:after {
-          content: '';
-          display: table; }
-        header.feature:not(.full-bleed) .featured-article .constrain:after {
-          clear: both; }
-        header.feature:not(.full-bleed) .featured-article .constrain:last-child {
-          margin-right: 0%; } }
   header.feature:not(.full-bleed) .featured-article a:hover h1 {
     -webkit-transition: opacity, 0.1s;
     transition: opacity, 0.1s;
