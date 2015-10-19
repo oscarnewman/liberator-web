@@ -45,6 +45,16 @@
                   </p>
                 </div>
 
+                <div class="article">
+                  <a href="{{ posts[4].path }}">
+                    <h2>{{ posts[4].title }}</h2>
+                  </a>
+                  <p class="byline ">by <span class="author">{{ posts[4].article_author|default(posts[4].author) }}</span> | <span class="time">{{posts[2].post_date|date('F j, Y')}}</span></p>
+                  <p class="description">
+                      {{ posts[4].description|default(function('strip_tags', posts[4].content) < 100 ? function('strip_tags', posts[4].content)|slice(0,100) ~ "..." : function('strip_tags', posts[4].content)) }}
+                  </p>
+                </div>
+
             </div>
 
 
