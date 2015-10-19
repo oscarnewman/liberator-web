@@ -17,7 +17,7 @@
             <a href="{{ featured.path }}">
               <h1>{{ featured.title}}</h1>
               <p class="subtitle">{{ featured.sub_heading }}</p>
-              <p class="byline">by <span class="author">{{ featured.article_author }}</span><span class="time"><i class="fa fa-clock-o"></i> <span class="eta"></span></span></p>
+              <p class="byline">by <span class="author">{{ featured.article_author|default(featured.author) }}</span> <span class="time">{{posts[2].post_date|date('F j, Y')}}</span> |<span class="time"><i class="fa fa-clock-o"></i> <span class="eta"></span> read</span></p>
             </a>
           </div>
         </div>

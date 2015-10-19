@@ -10,7 +10,7 @@
                   <a href="{{ posts[i].path }}">
                     <h2>{{ posts[i].title }}</h2>
                   </a>
-                  <p class="byline ">by <span class="author">{{ posts[i].article_author|default(posts[i].author) }}</span></p>
+                  <p class="byline ">by <span class="author">{{ posts[i].article_author|default(posts[i].author) }}</span><br><span class="time">{{posts[i].post_date|date('F j, Y')}}</span></p>
                   <p class="description">
                       {{ posts[i].description|default(function('strip_tags', posts[i].content) < 100 ? function('strip_tags', posts[i].content)|slice(0,100) ~ "..." : function('strip_tags', posts[i].content)) }}
                   </p>
@@ -29,7 +29,7 @@
                     {% endif %}
                     <h2>{{ posts[2].title }}</h2>
                   </a>
-                  <p class="byline ">by <span class="author">{{ posts[2].article_author|default(posts[2].author) }}</span></p>
+                  <p class="byline ">by <span class="author">{{ posts[2].article_author|default(posts[2].author) }}</span> | <span class="time">{{posts[2].post_date|date('F j, Y')}}</span></p>
                   <p class="description">
                       {{ posts[2].description|default(function('strip_tags', posts[2].content) < 100 ? function('strip_tags', posts[2].content)|slice(0,100) ~ "..." : function('strip_tags', posts[2].content)) }}
                   </p>
@@ -39,7 +39,7 @@
                   <a href="{{ posts[3].path }}">
                     <h2>{{ posts[3].title }}</h2>
                   </a>
-                  <p class="byline ">by <span class="author">{{ posts[3].article_author|default(posts[3].author) }}</span></p>
+                  <p class="byline ">by <span class="author">{{ posts[3].article_author|default(posts[3].author) }}</span> | <span class="time">{{posts[2].post_date|date('F j, Y')}}</span></p>
                   <p class="description">
                       {{ posts[3].description|default(function('strip_tags', posts[3].content) < 100 ? function('strip_tags', posts[3].content)|slice(0,100) ~ "..." : function('strip_tags', posts[3].content)) }}
                   </p>
@@ -60,7 +60,7 @@
                 <a href="{{ sports[i].path }}">
                   <h2>{{ sports[i].title }}</h2>
                 </a>
-                <p class="byline ">by <span class="author">{{ sports[i].article_author|default(sports[i].author) }}</span></p>
+                <p class="byline ">by <span class="author">{{ sports[i].article_author|default(sports[i].author) }}</span> | <span class="time">{{posts[2].post_date|date('F j, Y')}}</span></p>
                 <p class="description">
                     {{ sports[i].description|default(function('strip_tags', sports[i].content) < 100 ? function('strip_tags', sports[i].content)|slice(0,100) ~ "..." : function('strip_tags', sports[i].content)) }}
                 </p>
@@ -75,7 +75,7 @@
               <a href="{{ sports[i].path }}">
                 <h2>{{ sports[i].title }}</h2>
               </a>
-              <p class="byline ">by <span class="author">{{ sports[i].article_author|default(sports[i].author) }}</span></p>
+              <p class="byline ">by <span class="author">{{ sports[i].article_author|default(sports[i].author) }}</span> | <span class="time">{{posts[2].post_date|date('F j, Y')}}</span></p>
               <p class="description">
                   {{ sports[i].description|default(function('strip_tags', sports[i].content) < 100 ? function('strip_tags', sports[i].content)|slice(0,100) ~ "..." : function('strip_tags', sports[i].content)) }}
               </p>
@@ -107,7 +107,7 @@
               {% endif %}
               <h2>{{ post.title }}</h2>
             </a>
-            <p class="byline ">by <span class="author">{{ post.article_author|default(post.author) }}</span></p>
+            <p class="byline ">by <span class="author">{{ post.article_author|default(post.author) }}</span> | <span class="time">{{posts[2].post_date|date('F j, Y')}}</span></p>
             <p class="description">
                 {{ post.description|default(function('strip_tags', post.content) < 100 ? function('strip_tags', post.content)|slice(0,100) ~ "..." : function('strip_tags', post.content)) }}
             </p>
