@@ -1465,8 +1465,6 @@ header.feature.full-bleed {
       display: table; }
     header.feature.full-bleed .featured-article:after {
       clear: both; }
-    header.feature.full-bleed .featured-article .constrain {
-      max-width: 700px; }
     header.feature.full-bleed .featured-article a:hover h1 {
       -webkit-transition: opacity, 0.1s;
       transition: opacity, 0.1s;
