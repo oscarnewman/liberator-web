@@ -41,7 +41,7 @@ $context['posts'] = Timber::get_posts('numberposts=8&cat=-2,-3,-4,-10,-8');
 $context['games'] = Timber::get_posts('numberposts=4&cat=8');
 
 $context['sports'] = Timber::get_posts('numberposts=4&cat=9');
-$context['entertainment'] = Timber::get_posts('numberposts=3&cat=10');
+$context['entertainment'] = Timber::get_posts('numberposts=5&cat=10');
 
 $context['photo'] = Timber::get_post([
     'cat' => 4
