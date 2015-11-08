@@ -22,6 +22,7 @@
             <div class="two-thirds small-articles">
 
               {% for i in 2..8 %}
+                {% if posts[i] is defined %}
                 <div class="article">
                   <a href="{{ posts[i].path }}">
                     {% if posts[i].thumbnail %}
@@ -34,6 +35,7 @@
                       {{ posts[i].description|default(function('strip_tags', posts[i].content) < 100 ? function('strip_tags', posts[i].content)|slice(0,100) ~ "..." : function('strip_tags', posts[i].content)) }}
                   </p>
                 </div>
+                {% endif %}
               {% endfor %}
 
 {#
