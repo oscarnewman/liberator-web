@@ -21,7 +21,22 @@
             </div>
             <div class="two-thirds small-articles">
 
+              {% for i in 2..8 %}
+                <div class="article">
+                  <a href="{{ posts[i].path }}">
+                    {% if posts[i].thumbnail %}
+                      <img src="{{ posts[i].thumbnail.src }}" alt="" class="featured-image">
+                    {% endif %}
+                    <h2>{{ posts[i].title }}</h2>
+                  </a>
+                  <p class="byline ">by <span class="author">{{ posts[i].article_author|default(posts[i].author) }}</span> | <span class="time">{{posts[i].post_date|date('F j, Y')}}</span></p>
+                  <p class="description">
+                      {{ posts[i].description|default(function('strip_tags', posts[i].content) < 100 ? function('strip_tags', posts[i].content)|slice(0,100) ~ "..." : function('strip_tags', posts[i].content)) }}
+                  </p>
+                </div>
+              {% endfor %}
 
+{#
                 <div class="article">
                   <a href="{{ posts[2].path }}">
                     {% if posts[2].thumbnail %}
@@ -53,7 +68,7 @@
                   <p class="description">
                       {{ posts[4].description|default(function('strip_tags', posts[4].content) < 100 ? function('strip_tags', posts[4].content)|slice(0,100) ~ "..." : function('strip_tags', posts[4].content)) }}
                   </p>
-                </div>
+                </div> #}
 
             </div>
 
