@@ -135,8 +135,8 @@
 /**
  * Apply a clearfix to an element.
  */
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
-@import url(http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
+@import url(https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic);
 @import url(https://fonts.googleapis.com/css?family=Gentium+Book+Basic:400,700,400italic,700italic);
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
@@ -1005,11 +1005,12 @@ article {
     article .image img, article .wp-caption img {
       width: 100%;
       margin-bottom: 6px; }
-    article .image p, article .wp-caption p {
+    article .image p, article .image p.description, article .image p.caption, article .wp-caption p, article .wp-caption p.description, article .wp-caption p.caption {
       font-size: 14px;
       line-height: 19px;
-      color: rgba(0, 0, 0, 0.5); }
-      article .image p.byline, article .wp-caption p.byline {
+      color: rgba(0, 0, 0, 0.5);
+      font-family: "Open Sans" !important; }
+      article .image p.byline, article .image p.description.byline, article .image p.caption.byline, article .wp-caption p.byline, article .wp-caption p.description.byline, article .wp-caption p.caption.byline {
         margin-bottom: 2px; }
   article .actions div {
     display: inline-block;
