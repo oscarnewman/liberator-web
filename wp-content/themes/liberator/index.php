@@ -52,6 +52,13 @@ $context['old_photos'] = Timber::get_posts([
     'cat' => 4
 ]);
 
+
+$context['message'] = Timber::get_posts([
+    'numberposts' => 1,
+    'cat' => 11
+]);
+
+
 $templates = array( 'index.twig' );
 if ( is_home() ) {
 	array_unshift( $templates, 'home.twig' );

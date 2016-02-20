@@ -4,6 +4,12 @@
 
     {% include "article-header-home.twig" with {"bg" : "white"} %}
 
+    {% if message[0] is defined %}
+      {# {% if message.%} #}
+        {% include "message.twig" with {"message" : message[0]} %}
+      {# {% endif %} #}
+    {% endif %}
+
     {% include "subfeatures.twig" %}
 
     {# {% include "photo-of-the-day-small.twig" %} #}

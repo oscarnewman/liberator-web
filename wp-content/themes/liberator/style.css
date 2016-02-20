@@ -1314,6 +1314,31 @@ section.sports {
   .subsection .article h2 {
     font-size: 24px !important; }
 
+.message-container {
+  *zoom: 1;
+  width: auto;
+  max-width: 1000px;
+  float: none;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0; }
+  .message-container:before, .message-container:after {
+    content: '';
+    display: table; }
+  .message-container:after {
+    clear: both; }
+  .message-container .message-banner {
+    background: #B585B8;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: -15px; }
+    .message-container .message-banner h3, .message-container .message-banner p {
+      color: rgba(255, 255, 255, 0.8);
+      margin: 0;
+      padding: 0; }
+
 header.feature:not(.full-bleed) .featured-article {
   *zoom: 1;
   width: auto;
