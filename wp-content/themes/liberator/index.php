@@ -55,7 +55,7 @@ $context['old_photos'] = Timber::get_posts([
 
 $context['message'] = Timber::get_posts([
     'numberposts' => 1,
-    'cat' => 11
+    'category' => 'message'
 ]);
 
 
