@@ -1293,7 +1293,6 @@ section.sports {
     background: white;
     padding: 3px;
     -webkit-transform: translateY(50%);
-    -ms-transform: translateY(50%);
     transform: translateY(50%);
     line-height: 20px;
     position: relative; }
@@ -1332,10 +1331,10 @@ section.sports {
   .message-container .message-banner {
     background: #B585B8;
     padding: 10px;
-    margin-bottom: 10px;
-    margin-top: -15px; }
+    margin-bottom: -20px;
+    margin-top: 30px; }
     .message-container .message-banner h3, .message-container .message-banner p {
-      color: rgba(255, 255, 255, 0.8);
+      color: white;
       margin: 0;
       padding: 0; }
 

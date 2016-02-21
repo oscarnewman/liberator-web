@@ -3,6 +3,12 @@
 
       {% include "nav.twig" %}
 
+      {% if message[0] is defined %}
+        {# {% if message.%} #}
+          {% include "message.twig" with {"message" : message[0]} %}
+        {# {% endif %} #}
+      {% endif %}
+
       <div class="featured-article">
         <div class="content">
           {% if featured.thumbnail %}
