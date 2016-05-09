@@ -320,7 +320,7 @@ body {
   background-color: white;
   font-size: 14px;
   line-height: 1.6;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: #666;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%; }
@@ -416,7 +416,7 @@ input[type="button"] {
   font-size: 11px;
   font-weight: 600;
   line-height: 38px;
-  letter-spacing: 0.1rem;
+  letter-spacing: .1rem;
   text-transform: uppercase;
   text-decoration: none;
   white-space: nowrap;
@@ -499,7 +499,7 @@ nav {
       clear: both; }
   nav .logo {
     float: left;
-    font-family: "Gentium Book Basic";
+    font-family: 'Gentium Book Basic';
     font-style: italic;
     font-size: 36px;
     color: white;
@@ -512,7 +512,7 @@ nav {
       color: white; }
   nav .footer-logo {
     float: left;
-    font-family: "Gentium Book Basic";
+    font-family: 'Gentium Book Basic';
     font-style: italic;
     font-size: 36px;
     color: white;
@@ -523,36 +523,36 @@ nav {
       color: white; }
   nav ul.menu-desktop {
     display: none; }
-@media(max-width: 860px) {
-  nav ul.menu-desktop {
-    background: #333;
-    position: absolute;
-    top: 90px;
-    left: 0;
-    width: 100%;
-    z-index: 4;
-    padding: 0; }
-    nav ul.menu-desktop .search {
-      display: none; }
-    nav ul.menu-desktop li:not(.search-field-wrap):not(.search) {
-      display: block;
-      line-height: 20px; }
-      nav ul.menu-desktop li:not(.search-field-wrap):not(.search) a {
-        color: white;
-        margin: 0;
-        padding: 10px 0;
-        display: block;
-        height: 100%; } }
-@media(min-width: 860px) {
-  nav ul.menu-desktop {
-    display: block; }
-    nav ul.menu-desktop .search {
-      display: inline-block; } }
+    @media (max-width: 860px) {
+      nav ul.menu-desktop {
+        background: #333;
+        position: absolute;
+        top: 90px;
+        left: 0;
+        width: 100%;
+        z-index: 4;
+        padding: 0; }
+        nav ul.menu-desktop .search {
+          display: none; }
+        nav ul.menu-desktop li:not(.search-field-wrap):not(.search) {
+          display: block;
+          line-height: 20px; }
+          nav ul.menu-desktop li:not(.search-field-wrap):not(.search) a {
+            color: white;
+            margin: 0;
+            padding: 10px 0;
+            display: block;
+            height: 100%; } }
+    @media (min-width: 860px) {
+      nav ul.menu-desktop {
+        display: block; }
+        nav ul.menu-desktop .search {
+          display: inline-block; } }
   nav ul.menu-mobile {
     display: block; }
-@media(min-width: 860px) {
-  nav ul.menu-mobile {
-    display: none; } }
+    @media (min-width: 860px) {
+      nav ul.menu-mobile {
+        display: none; } }
     nav ul.menu-mobile li a {
       font-size: 20px; }
   nav ul {
@@ -630,7 +630,7 @@ p.byline {
     color: rgba(0, 0, 0, 0.56); }
 
 p.description {
-  font-family: "Lora" !important;
+  font-family: 'Lora' !important;
   font-weight: 400;
   color: #535353;
   margin: 0; }
@@ -702,8 +702,8 @@ section.photo-of-the-day {
     margin-left: 10px;
     margin-right: 10px;
     font-weight: 200;
-    font-size: 30px;
-    line-height: 34px; }
+    font-size: 22px;
+    line-height: 30px; }
     @media (min-width: 768px) {
       section.photo-of-the-day p.description {
         margin-left: 0;
@@ -795,10 +795,12 @@ section.photo-of-the-day {
 .articles .article {
   background-size: cover !important;
   background-position: center !important; }
+
 .articles .gradient {
   background-image: -webkit-linear-gradient( left , rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4));
   background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4));
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)); }
+
 .articles .container {
   *zoom: 1;
   width: auto;
@@ -815,6 +817,7 @@ section.photo-of-the-day {
     display: table; }
   .articles .container:after {
     clear: both; }
+
 .articles h2 {
   color: rgba(255, 255, 255, 0.9);
   font-weight: 800;
@@ -824,6 +827,7 @@ section.photo-of-the-day {
   @media (min-width: 768px) {
     .articles h2 {
       font-size: 42px; } }
+
 .articles .subtitle {
   color: white;
   font-weight: 200;
@@ -833,8 +837,10 @@ section.photo-of-the-day {
   @media (min-width: 768px) {
     .articles .subtitle {
       font-size: 24px; } }
+
 .articles .byline {
   margin-bottom: 50px; }
+
 .articles .pagination {
   text-align: center; }
   .articles .pagination a.button {
@@ -932,7 +938,7 @@ footer {
       clear: both; }
   footer .logo {
     float: left;
-    font-family: "Gentium Book Basic";
+    font-family: 'Gentium Book Basic';
     font-style: italic;
     font-size: 36px;
     color: rgba(0, 0, 0, 0.75);
@@ -959,13 +965,13 @@ article {
   padding-left: 0;
   padding-right: 0;
   margin-top: 40px;
-  font-family: "Lora";
+  font-family: 'Lora';
   font-size: 20px;
   line-height: 34px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: rgba(0, 0, 0, 0.75);
-  letter-spacing: 0.01em; }
+  letter-spacing: .01em; }
   article:before, article:after {
     content: '';
     display: table; }
@@ -989,7 +995,7 @@ article {
     padding: 0;
     margin-bottom: 70px;
     margin-top: 50px;
-    font-family: "Open Sans";
+    font-family: 'Open Sans';
     font-weight: 200;
     font-size: 36px;
     font-style: italic; }
@@ -1001,7 +1007,7 @@ article {
   article blockquote {
     margin-bottom: 30px; }
   article .image, article .wp-caption {
-    font-family: "Open Sans"; }
+    font-family: 'Open Sans'; }
     article .image img, article .wp-caption img {
       width: 100%;
       margin-bottom: 6px; }
@@ -1009,7 +1015,7 @@ article {
       font-size: 14px;
       line-height: 19px;
       color: rgba(0, 0, 0, 0.5);
-      font-family: "Open Sans" !important; }
+      font-family: 'Open Sans' !important; }
       article .image p.byline, article .image p.description.byline, article .image p.caption.byline, article .wp-caption p.byline, article .wp-caption p.description.byline, article .wp-caption p.caption.byline {
         margin-bottom: 2px; }
   article .actions div {
@@ -1191,7 +1197,7 @@ article {
       color: rgba(0, 0, 0, 0.33);
       margin: 0; }
     .articles.flow .featured-photo .description {
-      font-family: "Open Sans" !important;
+      font-family: 'Open Sans' !important;
       font-weight: 200;
       font-size: 30px;
       color: rgba(61, 61, 61, 0.55);
@@ -1213,7 +1219,7 @@ article {
       line-height: 21px; }
     .articles.flow .article h2, .articles.flow .article p, .articles.flow .article a {
       color: black;
-      font-family: "Open Sans"; }
+      font-family: 'Open Sans'; }
     .articles.flow .article h2 {
       margin: 0 0 2px 0;
       font-size: 30px;
@@ -1585,5 +1591,4 @@ header.feature.full-bleed {
     font-weight: 800;
     font-size: 26px;
     line-height: 30px; }
-
 /*# sourceMappingURL=style.css.map */
