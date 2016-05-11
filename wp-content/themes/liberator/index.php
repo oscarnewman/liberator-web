@@ -26,7 +26,7 @@ $context['image_posts'] = Timber::get_posts('numberposts=6&meta_key=_thumbnail_i
 
 $context['plain_posts'] = Timber::get_posts(array(
     'numberposts' => 8,
-    'category__not_in' => [2, 3, 4, 12],
+    'category__not_in' => [2, 3, 4, 12, 223],
     'meta_query' => array(
         array(
             'key' => '_thumbnail_id',
