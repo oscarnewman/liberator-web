@@ -1,21 +1,29 @@
-<nav>
+<nav {% if bg and bg == "white" %}class="white"{% endif %}>
 <div class="container">
   {# <div class="logo"><a href="{{ function('bloginfo', 'url') }}" rel="home">L</a></div> #}
   {# <input type="checkbox" class="logocheck" name="logocheck" id="logocheck"> #}
-  <div class="footer-logo"><a href="{{ function('bloginfo', 'url') }}" rel="home">The Liberator</a></div>
+  <div class="logo"><a href="{{ function('bloginfo', 'url') }}" rel="home">The Liberator</a></div>
   {# <div class="logo">L</div> #}
 
   <ul class="menu-desktop">
-    <li><a href="#">Feature</a></li>
-    <li><a href="#">Commentary</a></li>
-    <li><a href="#">Sports</a></li>
-    <li><a href="#"><i class="fa fa-search"></i></a></li>
+    <li><a href="{{ fn('get_site_url') }}/category/news">News</a></li>
+    <li><a href="{{ fn('get_site_url') }}/category/feature">Feature</a></li>
+    <li><a href="{{ fn('get_site_url') }}/category/commentary">Commentary</a></li>
+    <li><a href="{{ fn('get_site_url') }}/category/entertainment">Entertainment</a></li>
+    <li><a href="{{ fn('get_site_url') }}/category/sports">Sports</a></li>
+    <li><a target="_blank" href="http://issuu.com/theliberator1">PDFs</a></li>
+    <li class="search"><a class="search-toggle" href="#"><i class="fa fa-search"></i></a></li>
+    <li class="search-field-wrap"><form action="{{ fn('get_site_url') }}" method="GET"><input type="text" name="s"></form></li>
+
   </ul>
 
   <ul class="menu-mobile">
-    <li><a href="">Menu</a></li>
-    <li><a href=""><i class="fa fa-search"></i></a></li>
+    {# <li><a href="">Menu</a></li> #}
+    <li><a class="search-toggle" href="#"><i class="fa fa-search"></i></a></li>
+    <li class="search-field-wrap"><form action="{{ fn('get_site_url') }}" method="GET"><input type="text" name="s"></form></li>
+    <li><a href="#" class="menu"><i class="fa fa-bars"></i></a></li>
   </ul>
 
 </div>
+
 </nav>

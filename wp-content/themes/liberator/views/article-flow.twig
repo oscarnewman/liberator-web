@@ -1,0 +1,146 @@
+<section class="articles flow">
+    <div class="left two-thirds">
+
+        <div class="row general">
+
+            <div class="one-third">
+
+                {% for i in 0..1 %}
+                <div class="article">
+                  <a href="{{ posts[i].path }}">
+                    <h2>{{ posts[i].title }}</h2>
+                  </a>
+                  <p class="byline ">by <span class="author">{{ posts[i].article_author|default(posts[i].author) }}</span><br><span class="time">{{posts[i].post_date|date('F j, Y')}}</span></p>
+                  <p class="description">
+                      {{ posts[i].description|default(function('strip_tags', posts[i].content) < 100 ? function('strip_tags', posts[i].content)|slice(0,100) ~ "..." : function('strip_tags', posts[i].content)) }}
+                  </p>
+                </div>
+                {% endfor %}
+
+
+            </div>
+            <div class="two-thirds small-articles">
+
+              {% for i in 2..5 %}
+                {% if posts[i] is defined %}
+                <div class="article">
+                  <a href="{{ posts[i].path }}">
+                    {% if posts[i].thumbnail %}
+                      <img src="{{ posts[i].thumbnail.src }}" alt="" class="featured-image">
+                    {% endif %}
+                    <h2>{{ posts[i].title }}</h2>
+                  </a>
+                  <p class="byline ">by <span class="author">{{ posts[i].article_author|default(posts[i].author) }}</span> | <span class="time">{{posts[i].post_date|date('F j, Y')}}</span></p>
+                  <p class="description">
+                      {{ posts[i].description|default(function('strip_tags', posts[i].content) < 100 ? function('strip_tags', posts[i].content)|slice(0,100) ~ "..." : function('strip_tags', posts[i].content)) }}
+                  </p>
+                </div>
+                {% endif %}
+              {% endfor %}
+
+{#
+                <div class="article">
+                  <a href="{{ posts[2].path }}">
+                    {% if posts[2].thumbnail %}
+                      <img src="{{ posts[2].thumbnail.src }}" alt="" class="featured-image">
+                    {% endif %}
+                    <h2>{{ posts[2].title }}</h2>
+                  </a>
+                  <p class="byline ">by <span class="author">{{ posts[2].article_author|default(posts[2].author) }}</span> | <span class="time">{{posts[2].post_date|date('F j, Y')}}</span></p>
+                  <p class="description">
+                      {{ posts[2].description|default(function('strip_tags', posts[2].content) < 100 ? function('strip_tags', posts[2].content)|slice(0,100) ~ "..." : function('strip_tags', posts[2].content)) }}
+                  </p>
+                </div>
+
+                <div class="article">
+                  <a href="{{ posts[3].path }}">
+                    <h2>{{ posts[3].title }}</h2>
+                  </a>
+                  <p class="byline ">by <span class="author">{{ posts[3].article_author|default(posts[3].author) }}</span> | <span class="time">{{posts[2].post_date|date('F j, Y')}}</span></p>
+                  <p class="description">
+                      {{ posts[3].description|default(function('strip_tags', posts[3].content) < 100 ? function('strip_tags', posts[3].content)|slice(0,100) ~ "..." : function('strip_tags', posts[3].content)) }}
+                  </p>
+                </div>
+
+                <div class="article">
+                  <a href="{{ posts[4].path }}">
+                    <h2>{{ posts[4].title }}</h2>
+                  </a>
+                  <p class="byline ">by <span class="author">{{ posts[4].article_author|default(posts[4].author) }}</span> | <span class="time">{{posts[2].post_date|date('F j, Y')}}</span></p>
+                  <p class="description">
+                      {{ posts[4].description|default(function('strip_tags', posts[4].content) < 100 ? function('strip_tags', posts[4].content)|slice(0,100) ~ "..." : function('strip_tags', posts[4].content)) }}
+                  </p>
+                </div> #}
+
+            </div>
+
+
+
+        </div>
+
+        {% include 'sports.twig' %}
+
+        <div class="row">
+          <div class="one-half small-articles">
+              {% for i in 0..1 %}
+              <div class="article">
+                <a href="{{ sports[i].path }}">
+                  <h2>{{ sports[i].title }}</h2>
+                </a>
+                <p class="byline ">by <span class="author">{{ sports[i].article_author|default(sports[i].author) }}</span> | <span class="time">{{posts[2].post_date|date('F j, Y')}}</span></p>
+                <p class="description">
+                    {{ sports[i].description|default(function('strip_tags', sports[i].content) < 100 ? function('strip_tags', sports[i].content)|slice(0,100) ~ "..." : function('strip_tags', sports[i].content)) }}
+                </p>
+              </div>
+              {% endfor %}
+
+          </div>
+          <div class="one-half small-articles">
+
+            {% for i in 2..3 %}
+            <div class="article">
+              <a href="{{ sports[i].path }}">
+                <h2>{{ sports[i].title }}</h2>
+              </a>
+              <p class="byline ">by <span class="author">{{ sports[i].article_author|default(sports[i].author) }}</span> | <span class="time">{{posts[2].post_date|date('F j, Y')}}</span></p>
+              <p class="description">
+                  {{ sports[i].description|default(function('strip_tags', sports[i].content) < 100 ? function('strip_tags', sports[i].content)|slice(0,100) ~ "..." : function('strip_tags', sports[i].content)) }}
+              </p>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+
+    </div>
+
+    <div class="right one-third">
+      <div class="featured-photo">
+        <img src="{{ photo.thumbnail.src }}" alt="">
+        <div class="content">
+          <h2>Featured Photo</h2>
+          <p class="description">{{ photo.description }}</p>
+          <p class="byline ">photo <span class="author">{{ photo.photo_credit }}</span></p>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3><span>Latest in <strong>Entertainment</strong></span></h3>
+
+        {% for post in entertainment %}
+          <div class="article">
+            <a href="{{ post.path }}">
+              {% if post.thumbnail and loop.index == 1 %}
+                <img src="{{ post.thumbnail.src }}" alt="" class="featured-image">
+              {% endif %}
+              <h2>{{ post.title }}</h2>
+            </a>
+            <p class="byline ">by <span class="author">{{ post.article_author|default(post.author) }}</span> | <span class="time">{{posts[2].post_date|date('F j, Y')}}</span></p>
+            <p class="description">
+                {{ post.description|default(function('strip_tags', post.content) < 100 ? function('strip_tags', post.content)|slice(0,100) ~ "..." : function('strip_tags', post.content)) }}
+            </p>
+          </div>
+        {% endfor %}
+
+      </div>
+    </div>
+</section>

@@ -1,24 +1,30 @@
 {% if featured.thumbnail %}
-<header class="feature" style="background-image: url({{ featured.thumbnail.src }})">
+<header class="feature full-bleed" style="background-image: url({{ featured.thumbnail.src }})">
 {% else %}
 <header class="feature no-img">
 {% endif %}
   <div class="gradient">
 
-    {% include "nav.twig" %}
 
-      
+    {% if featured.thumbnail %}
+      {% include "nav.twig" %}
+    {% else %}
+      {% include "nav.twig" with {"bg" : "white"} %}
+      <br>
+    {% endif %}
+
+
       <div class="featured-article">
         <div class="constrain">
           <a href="{{ featured.path }}">
             <h1>{{ featured.title}}</h1>
-            {% if post.get_field('sub_heading') %}
-              <p class="subtitle">{{ featured.sub_heading }}<span class="time"><i class="fa fa-clock-o"></i> <span class="eta"></span></span></p>
-              <p class="byline">by <span class="author">{{ featured.article_author }}</span></p>
+            {% if featured.get_field('sub_heading') %}
+              <p class="subtitle">{{ featured.sub_heading }}<span class="time"><span class="time">{{featured.post_date|date('F j, Y')}}</span> | <i class="fa fa-clock-o"></i> <span class="eta"></span> read</span></p>
+              <p class="byline ">by <span class="author">{{ featured.article_author|default(featured.author) }}</span></p>
             {% else %}
-              <p class="byline">by <span class="author">{{ featured.article_author }}</span><span class="time"><i class="fa fa-clock-o"></i> <span class="eta"></span></span></p>
+              <p class="byline ">by <span class="author">{{ featured.article_author|default(featured.author) }}</span><span class="time">{{featured.post_date|date('F j, Y')}}</span> &nbsp;|<span class="time"><i class="fa fa-clock-o"></i> <span class="eta"></span> read</span></p>
             {% endif %}
-      
+
           </a>
         </div>
       </div>

@@ -16,10 +16,12 @@ class Liberator extends TimberSite {
 		add_theme_support( 'post-formats' );
 		add_theme_support( 'post-thumbnails' );
 		add_theme_support( 'menus' );
+
 		add_filter( 'timber_context', array( $this, 'add_to_context' ) );
 		add_filter( 'get_twig', array( $this, 'add_to_twig' ) );
 		add_action( 'init', array( $this, 'register_post_types' ) );
 		add_action( 'init', array( $this, 'register_taxonomies' ) );
+
 		parent::__construct();
 	}
 
@@ -30,6 +32,7 @@ class Liberator extends TimberSite {
 	function register_taxonomies() {
 		//this is where you can register custom taxonomies
 	}
+
 
 	function add_to_context( $context ) {
 		$context['foo'] = 'bar';
@@ -47,6 +50,8 @@ class Liberator extends TimberSite {
 		return $twig;
 	}
 
+
+
 }
 
 new Liberator();
@@ -60,14 +65,14 @@ function liberator_scripts()
 {
     // Deregister the included library
     wp_deregister_script( 'jquery' );
-     
+
     // Register the library again from Google's CDN
     wp_register_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js', array(), null, false );
-     
+
     // Register the script like this for a theme:
     wp_register_script( 'reading-time', get_template_directory_uri() . '/assets/js/reading-time.js', array( 'jquery' ) );
     wp_register_script( 'functions', get_template_directory_uri() . '/assets/js/functions.js', array( 'jquery' ) );
- 
+
     // For either a plugin or a theme, you can then enqueue the script:
     wp_enqueue_script( 'reading-time' );
     wp_enqueue_script( 'functions' );

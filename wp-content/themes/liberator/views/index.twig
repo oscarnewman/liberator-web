@@ -1,14 +1,19 @@
 {% extends "base.twig" %}
 
 {% block content %}
-    
-    {% include "article-header-home.twig" %}
+
+    {% include "article-header-home.twig" with {"bg" : "white", "message": message} %}
+
+
 
     {% include "subfeatures.twig" %}
-    
-    {% include "photo-of-the-day-small.twig" %}
 
-    <section class="articles">
+    {# {% include "photo-of-the-day-small.twig" %} #}
+
+    {% include "article-flow.twig" %}
+
+     <section class="articles">
+      {#
         {% for i in 0..2 %}
             {% for j in 0..1 %}
                 {% set post = image_posts[2*i + j] %}
@@ -26,7 +31,7 @@
                   </div>
                 </div>
             {% endfor %}
-            
+
             <div class="articles-small">
                 {% for j in 0..1 %}
                     {% set post = plain_posts[2*i + j] %}
@@ -51,17 +56,17 @@
                 </div>
             {% endfor %}
         </div>
-
-        <div class="pagination">
+       #}
+        {# <div class="pagination">
           <a href="#" class="button">More Articles</a>
-        </div>
-        
+        </div> #}
+
     </section>
 
 
 {% endblock %}
 
-{# 
+{#
 0   0   = 0
 0   1   = 1
 1   0   = 2
